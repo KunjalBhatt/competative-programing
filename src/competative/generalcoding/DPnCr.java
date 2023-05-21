@@ -1,4 +1,4 @@
-package generalcoding;
+package competative.generalcoding;
 
 import java.util.Arrays;
 
