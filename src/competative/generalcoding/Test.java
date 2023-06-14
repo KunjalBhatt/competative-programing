@@ -4,9 +4,17 @@ import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
-        int[] a = {3, 6, 3};
-        long coins = minimumNumberOfCoins(a, a.length, 5);
-        System.out.println(coins);
+        int[] a = {3, 4, 5};
+        int total = 1 << a.length;
+        for(int mask=0; mask < total;mask++){
+            for(int i=0;i<a.length;i++){
+                if((mask & (1<<i)) != 0){
+                    System.out.print(a[i]+" ");
+                }
+            }
+            System.out.println();
+        }
+
     }
 
     public static long minimumNumberOfCoins(int[] coins, int numberOfCoins, int value) {
